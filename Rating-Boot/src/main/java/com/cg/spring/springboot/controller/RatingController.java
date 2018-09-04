@@ -39,5 +39,11 @@ public class RatingController {
 		
 		return new ModelAndView("success","rat",rat1);
 	}
+	
+	@RequestMapping(value="/show")
+	public ModelAndView showall() {
+		Iterable<Rating> rat1 = service.getallrating();
+		return new ModelAndView("success","rat",rat1);
+	}
 
 }

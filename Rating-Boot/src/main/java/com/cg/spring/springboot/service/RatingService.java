@@ -10,4 +10,6 @@ public interface RatingService {
 	public Optional<Rating> getrating(int p_id);
 	
 	public Iterable<Rating> getallrating();
+	
+
 }

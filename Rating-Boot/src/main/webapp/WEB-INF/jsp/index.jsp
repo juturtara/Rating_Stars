@@ -1,11 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Rating</title>
+
 <style>
+body{
+
+background-color:lightblue;
+}
 .rating {
     width: 300px;
     height: 34px;
@@ -28,7 +34,7 @@
 input[type="radio"] {
     padding-right: 4px;
     position: absolute;
-    left: 340px;
+    left: 440px;
     margin-top: 10px;
 }
                  
@@ -47,7 +53,7 @@ span + input[type=radio] + label, legend + input[type=radio] + label {
 .rating input[type="radio"]:required + label:after {
     content: '';
     position: absolute;
-    left: 340px; 
+    left: 440px; 
     min-height: 10px;
     margin-top: -36px;
     text-align: right;
@@ -56,6 +62,7 @@ span + input[type=radio] + label, legend + input[type=radio] + label {
     display: block;
     width: 50px;
 }
+
  
 .rating label.stars {
     background: transparent url('../img/star_off.jpg') no-repeat center center;
@@ -76,14 +83,22 @@ span + input[type=radio] + label, legend + input[type=radio] + label {
 </head>
 <form action="/addrating" method="post">
 <body>
+<h2 align="center">RATINGS</h2><br>
+<table align="center">
 
-PRODUCT NAME: <input type="text" name="p_name" placeholder="Enter Product Name"/><br>
-PRODUCT ID: <input type="number" name="p_id" placeholder="Enter Product ID"/><br>
-MERCHANT ID: <input type="number" name="m_id" placeholder="Enter Merchant ID"/><br>
+<tr>
+<td>PRODUCT NAME: <input type="text" name="p_name" placeholder="Enter Product Name" required="required"/><br></td>
+</tr>
+<tr>
+<td>PRODUCT ID: <input type="number" name="p_id" placeholder="Enter Product ID" required="required"/><br></td>
+</tr>
+<tr>
+<td>MERCHANT ID: <input type="number" name="m_id" placeholder="Enter Merchant ID" required="required"/><br></td>
+</tr>
+</table>
 
-
-<p>Please rate this Product:</p>
-    <fieldset class="rating">     
+<p align="center">Please rate this Product:</p>
+    <fieldset style="width: 300px; margin: 0px auto;" class="rating" >     
         <input type="radio" name="stars" id="4_stars" value="5" >
         <label class="stars" for="4_stars">4 stars</label>
         <input type="radio" name="stars" id="3_stars" value="4" >
@@ -96,9 +111,13 @@ MERCHANT ID: <input type="number" name="m_id" placeholder="Enter Merchant ID"/><
         <label class="stars" for="0_stars">0 star</label>
         <span  class="label"> Rating: </span>
     </fieldset><br>
-    
-    <input type="submit" value="Submit"></input>
-    
+  <div style="text-align:center">
+    <input type="submit" value="Submit" ></input>
+    </div> 
+    <br>
+     <center><a href="/show">Show Ratings</a></center>  
 </body>
+
 </form>
+
 </html>

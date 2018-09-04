@@ -8,8 +8,9 @@
 <title>Ratings</title>
 </head>
 <body>
-<table border="1px">
-<tr>
+<h3 align="center">RATINGS</h3><br>
+<table border="1px" align="center">
+<tr height="50">
 <th>ProductId</th>
 <th>ProductName</th>
 <th>MerchantId</th>
@@ -19,11 +20,14 @@
 <tr>
 <td>${rate.p_id}</td>
 <td>${rate.p_name}</td>
-<td>${ rate.m_id}</td>
-<td>${ rate.stars}</td>
+<td>${rate.m_id}</td>
+<td>${rate.stars}</td>
 
 </tr>
 </a:forEach>
 </table>
+<br>
+<br>
+<center><a href="/index">Back to Home</a></center>
 </body>
 </html>

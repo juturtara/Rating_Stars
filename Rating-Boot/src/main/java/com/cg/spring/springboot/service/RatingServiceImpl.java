@@ -33,4 +33,6 @@ public class RatingServiceImpl implements RatingService {
 		return repo.findAll();
 	}
 
+
+
 }
